@@ -214,7 +214,10 @@ function ProjectsPage() {
                 ))}
               </div>
               <p className="project-impact">{project.impact}</p>
-              <p className='project-description-desc'>{project.description}</p>
+              <p
+                className='project-description-desc'
+                dangerouslySetInnerHTML={{ __html: project.description }}
+              />
               <p className='view-demo'><a href={project.demovideo}>View demo video of the website</a></p>
               {project.deployment ? (<p className='view-deployment'><a href={project.deployment}>View deployed website</a></p>) : null}
             </details>
