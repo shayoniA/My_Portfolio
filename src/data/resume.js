@@ -189,21 +189,21 @@ export const projects = [
   {
     name: 'Ingrelens',
     stack: ['LLMs (Google Gemini API)', 'Flask', 'ReactJS', 'Tesseract OCR', 'MongoDB', 'Caching', "Ollama's Mistral model", 'Render'],
-    description: `Key Features:
-1. Image-based ingredient extraction:  Upload a cosmetic product image and automatically extract ingredient text using OCR.
-2. AI-powered ingredient classification:  Ingredients are classified as good or bad using LLMs instead of static rule-based systems.
-3. Dynamic health scoring:  A health score is generated based on the overall ingredient composition.
-4. Click-to-explain ingredients:  Click on any ingredient to receive streamed explanations describing both positive and negative effects, rendered in Markdown.
-5. Cached explanations:  Previously explained ingredients are stored to reduce latency and minimize API calls.
-6. Clean and responsive UI:  Smooth animations, loaders, and an intuitive interface for better user experience.
+    description: (<>Key Features:
+1. <strong>Image-based ingredient extraction</strong>:  Upload a cosmetic product image and automatically extract ingredient text using OCR.
+2. <strong>AI-powered ingredient classification</strong>:  Ingredients are classified as good or bad using LLMs instead of static rule-based systems.
+3. <strong>Dynamic health scoring</strong>:  A health score is generated based on the overall ingredient composition.
+4. <strong>Click-to-explain ingredients</strong>:  Click on any ingredient to receive streamed explanations describing both positive and negative effects, rendered in Markdown.
+5. <strong>Cached explanations</strong>:  Previously explained ingredients are stored to reduce latency and minimize API calls.
+6. <strong>Clean and responsive UI</strong>:  Smooth animations, loaders, and an intuitive interface for better user experience.
 
-Why I Built Ingrelens?
+<strong>Why I Built Ingrelens?</strong>
 Most ingredient-checking applications rely on static databases and do not adapt to context or combinations of ingredients. Being interested in AI, LLMs, and real-world problem solving, I wanted to build a system that:
 - Uses AI reasoning instead of simple database lookups
 - Explains ingredients dynamically on demand
 - Enables meaningful comparison between cosmetic products
 - Future Improvements
-- Ingredient sensitivity personalization based on user profile and usage history`,
+- Ingredient sensitivity personalization based on user profile and usage history</>),
     impact: 'A web app that analyzes cosmetic product ingredients directly from images, and explains their impact on skin health. It categorizes ingredients as good or bad, and generates an overall health score for the product, enabling easy comparison between products (higher score indicates better suitability).',
     demovideo: 'https://drive.google.com/file/d/1cjAATwds1UuHmvSKC2Dn4ooxX58_pds4/view',
     deployment: 'https://ingrelens1.onrender.com',
@@ -212,19 +212,19 @@ Most ingredient-checking applications rely on static databases and do not adapt 
     name: 'Telegram Drug Detector',
     stack: ['Blockchain', 'Flask', 'ReactJS', 'Web3.js', 'NLP', 'Computer Vision', 'Solidity', 'EasyOCR', 'CLIP', 'Telethon (Telegram API)', 'PyTorch', 'Solidity', 'Ganache', 'Ethereum Smart Contracts'],
     description:
-      `Key Features:
-1. Automated Telegram Monitoring - Joins public Telegram channels and fetches recent messages automatically.
-2. Keyword-Based Text Analysis - Detects drug, contact, and transaction-related keywords and assigns suspicion scores.
-3. Computer Vision for Image Detection - Uses EasyOCR and CLIP to identify drug-related text and visuals inside images.
-4. Blockchain Logging - Stores flagged messages immutably on Ethereum (Ganache) with hashes and scores.
-5. Interactive Dashboard - React-based UI to view flagged messages, rank channels by total risk score, and inspect message-level details.
+      (<>Key Features:
+1. <strong>Automated Telegram Monitoring</strong>:  Joins public Telegram channels and fetches recent messages automatically.
+2. <strong>Keyword-Based Text Analysis</strong>:  Detects drug, contact, and transaction-related keywords and assigns suspicion scores.
+3. <strong>Computer Vision for Image Detection</strong>:  Uses EasyOCR and CLIP to identify drug-related text and visuals inside images.
+4. <strong>Blockchain Logging</strong>:  Stores flagged messages immutably on Ethereum (Ganache) with hashes and scores.
+5. <strong>Interactive Dashboard</strong>:  React-based UI to view flagged messages, rank channels by total risk score, and inspect message-level details.
 
-Why I Built TelegramDrugDetector?
+<strong>Why I Built TelegramDrugDetector?</strong>
 Drug trafficking and illegal substance promotion increasingly exploit encrypted and semi-public platforms like Telegram. Manual monitoring is slow, error-prone, and non-scalable. I built TelegramDrugDetector to explore how AI + blockchain + computer vision can be combined to:
 - Automatically detect suspicious activity at scale
 - Reduce human effort in monitoring large volumes of content
 - Preserve evidence immutably on blockchain for transparency and auditability
-- Visualize risk patterns across channels rather than isolated messages`,
+- Visualize risk patterns across channels rather than isolated messages</>),
     impact: 'An end-to-end monitoring and analysis system that detects and tracks suspicious drug-related content on Telegram. It automatically joins public Telegram channels, analyzes text/images for drug-related content using NLP and Computer Vision, assigns a suspicion score to each such channel, and logs high-risk messages on the blockchain, to make the records tamper-proof. A React-based dashboard visualizes flagged messages and suspicious channels.',
     demovideo: ' https://drive.google.com/file/d/1AkVjVbFNOT7-nSRA2ntYyLZLh8huQwRB/view',
   },
@@ -232,16 +232,16 @@ Drug trafficking and illegal substance promotion increasingly exploit encrypted 
     name: 'ProtoBoost',
     stack: ['Google Gemini API', 'AI Agents', 'Sentence Transformers', 'BERT', 'Flask', 'MongoDB', 'Pandas', 'Scikit-learn'],
     description:
-      `Key features:
-1. Prototype Input: The system accepts a prototype or codebase as input. Each feedback iteration represents one loop of the prototyping model.
-2. Multi-Agent Feedback Generation: Each of the ‘n’ ( input by user) user-specific agents behave as a distinct user category. For each iteration, they independently analyse the prototype, and generate feedback, with metadata: Category (like UX/UI, Feature Request, etc.), Confidence score, and Agent Identifier.
-3. Duplicate Feedback Detection: Each agent checks if a semantically-similar feedback  was already generated by the previous agents. If found, its Frequency is incremented. Else a new feedback entry is created with frequency 1.
-4. Interaction with Decision-Making Agent (another agent by my teammate for optimization): In the next iteration, the updated prototype is checked against the previous iteration’s feedback items. If a feedback was not implemented, the Agent Acceptance Rate of the contributing agent(s) decrease, and its Rejection Count increases. If Rejection Count exceeds a predefined threshold, the feedback is permanently discarded. This prevents repeated low-value feedback.
-5. Feedback Score: Each feedback item is associated with Category, Confidence score, Agent acceptance rate, Frequency. Therefore, each feedback is given a composite score using this formula:
-Feedback Score = (a × Frequency) + (b × Acceptance Rate) + (c × Confidence Score)
+      (<>Key features:
+1. <strong>Prototype Input</strong>:  The system accepts a prototype or codebase as input. Each feedback iteration represents one loop of the prototyping model.
+2. <strong>Multi-Agent Feedback Generation</strong>:  Each of the ‘n’ ( input by user) user-specific agents behave as a distinct user category. For each iteration, they independently analyse the prototype, and generate feedback, with metadata: Category (like UX/UI, Feature Request, etc.), Confidence score, and Agent Identifier.
+3. <strong>Duplicate Feedback Detection</strong>:  Each agent checks if a semantically-similar feedback  was already generated by the previous agents. If found, its Frequency is incremented. Else a new feedback entry is created with frequency 1.
+4. <strong>Interaction with Decision-Making Agent (another agent by my teammate for optimization)</strong>:  In the next iteration, the updated prototype is checked against the previous iteration’s feedback items. If a feedback was not implemented, the Agent Acceptance Rate of the contributing agent(s) decrease, and its Rejection Count increases. If Rejection Count exceeds a predefined threshold, the feedback is permanently discarded. This prevents repeated low-value feedback.
+5. <strong>Feedback Score</strong>: Each feedback item is associated with Category, Confidence score, Agent acceptance rate, Frequency. Therefore, each feedback is given a composite score using this formula:
+<strong>Feedback Score = [a × Frequency] + [b × Acceptance Rate] + [c × Confidence Score]</strong>
 
-Why did we built ProtoBoost?
-In iterative software prototyping, user feedback is essential for refining designs and improving usability. But current feedback collection systems rely heavily on manual interpretation, simple voting mechanisms, or static models. Also, there are challenges like feedback-conflicts, over-representation of users, and lack of awareness of prototype maturity. Hence we propose ProtoBoost that makes the prototyping model more scalable, intelligent, and cost-effective.`,
+<strong>Why did we built ProtoBoost?</strong>
+In iterative software prototyping, user feedback is essential for refining designs and improving usability. But current feedback collection systems rely heavily on manual interpretation, simple voting mechanisms, or static models. Also, there are challenges like feedback-conflicts, over-representation of users, and lack of awareness of prototype maturity. Hence we propose ProtoBoost that makes the prototyping model more scalable, intelligent, and cost-effective.</>),
     impact: 'A multi-agent AI-based feedback reasoning system designed to make iterative software prototyping adaptive and cost-efficient. It models feedback generation, evaluation, and convergence as a multi-loop and memory-based reasoning process, by simulating user categories via user-specific agents, that generate feedback with a composite score based on: frequency, rejection count, frequency, confidence, and historical agent-acceptance rate.',
     demovideo: 'https://drive.google.com/file/d/1MXN0UX4XVqYj7VdIH_wV0xYfSRl4_iQ5/view',
   },
@@ -249,15 +249,15 @@ In iterative software prototyping, user feedback is essential for refining desig
     name: 'StoreIntel - Purplle Tech Challenge 2026',
     stack: ['Computer Vision', 'Redis', 'Apache Kafka', 'Flask', 'YOLOv8', 'LLMs (Google Gemini API)', 'SafeDetector', 'ByteTrack', 'DeepSORT', 'OpenCV', 'imageio (video reader)', 'NumPy', 'Pydantic', 'SQLite', 'RLock', 'MongoDB', 'Next.js', 'TypeScript', 'WebSocket', 'Tailwind CSS', 'Docker'],
     description:
-      `Key features:
-1. Individuals are tracked across frames using appearance embeddings, clothing colour, height estimates, and movement direction.
-2. Re-identifies the same person after occlusion or across adjacent cameras, preserving a consistent identity throughout their visit.
-3. Frame-level detections are converted into business events, like ENTRY, EXIT, ZONE_ENTER, ZONE_EXIT, ZONE_DWELL (every 30s of continuous presence), BILLING_QUEUE_JOIN, BILLING_QUEUE_ABANDON, and REENTRY. Every event carries a confidence score.
-4. Identifies staff by uniform colour match, logo/badge detection, and behavioural signals (long duration, billing-area presence, no purchase history).
-5. Identifies billing-queue abandonment.
-6. Facilitates Anomaly Detection like QUEUE_ABANDONMENT_SPIKE, HIGH_DWELL_LOW_CONVERSION, SUSPICIOUS_RAPID_REENTRY, EXTREMELY_CROWDED_ZONE, etc.
-7. Natural language AI insights, daily/weekly store reports, powwered by Gemini (falls back to a rule-based engine in absence of API key).
-8. Live Dashboard Next.js frontend with real-time metrics, heatmap, anomaly feed, and AI insights. Updates arrive over WebSockets with 60-second polling as fallback.`,
+      (<>Key features:
+1. <strong>Individuals are tracked</strong> across frames using appearance embeddings, clothing colour, height estimates, and movement direction.
+2. <strong>Re-identification</strong> of the same person after occlusion or across adjacent cameras, preserving a consistent identity throughout their visit.
+3. <strong>Business events</strong> are obtained from frame-level detections, like ENTRY, EXIT, ZONE_ENTER, ZONE_EXIT, ZONE_DWELL (every 30s of continuous presence), BILLING_QUEUE_JOIN, BILLING_QUEUE_ABANDON, and REENTRY. Every event carries a confidence score.
+4. <strong>Staff identification</strong> by uniform colour match, logo/badge detection, and behavioural signals (long duration, billing-area presence, no purchase history).
+5. <strong>Billing-queue abandonment</strong> is identified.
+6. <strong>Facilitates Anomaly Detection</strong> like QUEUE_ABANDONMENT_SPIKE, HIGH_DWELL_LOW_CONVERSION, SUSPICIOUS_RAPID_REENTRY, EXTREMELY_CROWDED_ZONE, etc.
+7. <strong>Natural language AI insights</strong>, daily/weekly store reports, powwered by Gemini (falls back to a rule-based engine in absence of API key).
+8. <strong>Live Dashboard</strong> Next.js frontend with real-time metrics, heatmap, anomaly feed, and AI insights. Updates arrive over WebSockets with 60-second polling as fallback.</>),
     impact: 'StoreIntel, a retail store intelligence system, converts raw CCTV footage from physical retail stores into live business analytics. It detects and tracks people frame by frame, emits structured events, streams those events into a REST API, computes real-time metrics and anomalies, and displays everything on a live dashboard. See DESIGN.md for architecture details and CHOICES.md for the three key engineering decisions with full reasoning.',
     demovideo: 'https://drive.google.com/file/d/1mASiPfmA3S7dZ3B9f-NxtcMvMy16mUtE/view?usp=sharing',
   },
@@ -265,19 +265,19 @@ In iterative software prototyping, user feedback is essential for refining desig
     name: 'DressDemona',
     stack: ['AI Agents', 'Selenium', 'BeautifulSoup', 'LLMs (Ollama models)', 'Machine Learning (Clustering)', 'MongoDB', 'React.js', 'Flask', 'Pillow (image processing)', 'Render'],
     description:
-      `Key Features:
-1. LLM-powered Outfit Understanding – Upload outfit images and automatically extract concise clothing descriptions using a multimodal LLM.
-2. Personal Style Profiling – Build a dynamic fashion profile based on uploaded outfits.
-3. Style-Based Social Feed – Users are clustered based on fashion preferences and shown outfits from similar users.
-4. Cross-Platform Shopping Recommendations – Fetches fashion items matching the user’s style from multiple shopping sites (here, Amazon and Zara).
-5. End-to-End Full Stack System – Authentication, image uploads, feed ranking, clustering, and recommendations.
+      (<>Key Features:
+1. <strong>LLM-powered Outfit Understanding</strong>:  Upload outfit images and automatically extract concise clothing descriptions using a multimodal LLM.
+2. <strong>Personal Style Profiling</strong>:  Build a dynamic fashion profile based on uploaded outfits.
+3. <strong>Style-Based Social Feed</strong>:  Users are clustered based on fashion preferences and shown outfits from similar users.
+4. <strong>Cross-Platform Shopping Recommendations</strong>:  Fetches fashion items matching the user’s style from multiple shopping sites (here, Amazon and Zara).
+5. <strong>End-to-End Full Stack System</strong>:  Authentication, image uploads, feed ranking, clustering, and recommendations.
 
-Why I Built DressDemona?
+<strong>Why I Built DressDemona?</strong>
 Finding clothes that genuinely match personal style across multiple platforms is time-consuming and fragmented. Most fashion apps rely only on filters or static recommendations. I built DressDemona to explore how AI, computer vision, and user behavior can work together to:
 - Understand fashion visually, and learn evolving personal style
 - Combine personal styles with web-scraped recommendations from multiple sites using LLMs
 - Provide feed containing outfit recommendations of other users who share similar fashion tastes
-- Create a more intuitive and human-like fashion discovery experience`,
+- Create a more intuitive and human-like fashion discovery experience</>),
     impact: 'An AI-powered fashion-discovery platform that helps users define their personal style through outfit uploads and receive curated clothing recommendations across multiple e-commerce platforms. DressDemona creates a personalized fashion experience, where users upload outfit images on their profiles and get recommendations from websites like Zara and Amazon, all tailored to their fashion preferences.',
     demovideo: 'https://drive.google.com/file/d/1PP9bRJ21m0zf_isI5kRoBzH0NZQ6N9OQ/view',
   },
