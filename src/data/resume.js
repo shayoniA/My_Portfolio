@@ -295,7 +295,7 @@ export const experience = [
       'Learning production-oriented development patterns in a team environment.',
     ],
     link_floneo: 'https://drive.google.com/file/d/1dJ0dN67P6Fks8yRbBP9H2vbeuoQnLHaK/view',
-    time: 'May 2026 - August 2026\u00A0\u00A0\u00A0\u00A0\u00A0(3 months - Ongoing)'
+    time: 'May 2026 - July 2026\u00A0\u00A0\u00A0\u00A0\u00A0(3 months)'
   },
   {
     title: 'Oracle Fusion HCM Intern - MPC Cloud Consulting',
