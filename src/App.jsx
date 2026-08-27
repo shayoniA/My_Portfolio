@@ -253,7 +253,7 @@ function ExperiencePage() {
                   ))}
                 </ul>
                 {item.time ? (<p>{item.time}</p>) : null}
-                {item.link_floneo ? (<p className='viewResult'><a href={item.link_floneo}>View offer letter</a></p>) : null}
+                {item.link_floneo ? (<p className='viewResult'><a href={item.link_floneo}>View certificate</a></p>) : null}
                 {item.link_mpc ? (<p className='viewResult'><a href={item.link_mpc}>View certificate</a></p>) : null}
                 {item.link_cf ? (<p className='viewResult'><a href={item.link_cf}>View profile</a></p>) : null}
                 {item.link_myntra ? (<p className='viewResult'><a href={item.link_myntra}>View solution</a></p>) : null}
